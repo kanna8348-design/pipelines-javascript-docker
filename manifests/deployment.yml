@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kannadesignpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kannadesignpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: kannadesignpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kannadesignpipelinesjavascriptdocker 
+          image: nitishacr.azurecr.io/kannadesignpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
